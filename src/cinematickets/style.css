@@ -1,0 +1,132 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 27, 2019, 5:29:01 PM
+    Author     : joj0s
+*/
+
+.root{
+    -fx-text-fill:white;
+}
+
+.button{
+    -fx-text-fill: white;
+    -fx-padding: 10;
+    -fx-background-color: #3ca6a8;
+}
+
+.text-field{
+    -fx-background-color: #324044;
+    -fx-text-fill: lightgrey;
+}
+
+.label{
+    -fx-text-fill: white;
+}
+
+.tab-pane{
+    -fx-background-color: #3e5360
+}
+
+
+.tab{
+    -fx-background-color: #3e5360;
+    -fx-text-base-color: white;
+}
+
+.tab:selected{
+    -fx-background-color: #3e5360;
+    -fx-stroke: #3ca6a8;
+    -fx-text-fill: white;
+}
+
+.borderpane{
+     -fx-background-color: #324044;
+}
+
+.tab-pane *.tab-header-background {
+    -fx-background-color: #324044;
+}
+
+.h-box{
+    -fx-background-color: #3e5360;
+}
+
+.table-row-cell{
+    -fx-background-color: #324044;
+}
+
+.table-row-cell:selected{
+    -fx-background-color: #3ca6a8;
+}
+
+.table-row-cell .text{
+    -fx-fill: white ;
+}
+
+.table-view .column-header {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-color: #3ca6a8;
+}
+
+
+
+.combo-box-base {
+    -fx-background-color: #324044;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+    -fx-text-fill: white;
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+}
+
+.combo-box-base .list-view{
+    -fx-font-weight: 700;
+}
+
+.combo-box-base .list-cell{
+    -fx-text-fill: white;
+    -fx-background-color: #324044;
+}
+
+.combo-box-base .list-cell:hover{
+    -fx-text-fill: white;
+    -fx-background-color: #3ca6a8;
+}
+
+
+.text-area{
+    -fx-background-color:white;;
+    -fx-text-fill: white;
+}
+
+.text-area .content{
+      -fx-background-color: #324044;
+      -fx-text-fill: white;
+  }
+
+.check-box .box {
+
+-fx-background-color: #324044;
+-fx-border-color:grey;
+-fx-border-radius:3px; 
+
+}
+
+.check-box:selected .mark {
+
+-fx-background-color: white;
+
+}
+
+.check-box:selected .box {
+
+-fx-background-color: #3ca6a8;
+}
+
+.bgimg{
+    -fx-background-image: url("https://wallpapercave.com/wp/p4iaEa4.jpg")
+}

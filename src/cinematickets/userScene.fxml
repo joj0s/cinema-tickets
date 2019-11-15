@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="644.0" prefWidth="1011.0" styleClass="borderpane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cinematickets.UserSceneController">
+  <bottom>
+    <HBox>
+      <children>
+        <Label fx:id="statusMessage" text="">
+          <HBox.margin>
+            <Insets left="10.0" />
+          </HBox.margin>
+        </Label>
+        <Region prefHeight="26.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+        <Button fx:id="usignOutButton" mnemonicParsing="false" onAction="#signOut" prefHeight="26.0" prefWidth="112.0" text="Αποσύνδεση">
+          <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+          </HBox.margin>
+        </Button>
+      </children>
+    </HBox>
+  </bottom>
+  <center>
+    <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab fx:id="umoviesTab" style="-fx-text-fill: white;" text="Ταινίες">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <ComboBox fx:id="movieGenreComboBox" layoutX="389.0" layoutY="41.0" prefWidth="152.0" promptText="Είδος ταινίας" style="-fx-text-fill: white;">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList" />
+                  </items>
+                </ComboBox>
+                <TextField fx:id="movieSearchField" layoutX="645.0" layoutY="41.0" prefWidth="200.0" />
+                <Button fx:id="movieSearchButton" layoutX="875.0" layoutY="36.0" mnemonicParsing="false" onAction="#searchMovies" text="Αναζήτηση" />
+                <TableView id="moviesTable" fx:id="movieTable" layoutX="252.0" layoutY="115.0" prefWidth="425.0">
+                  <columns>
+                    <TableColumn fx:id="colMoviesName" maxWidth="5000.0" minWidth="10.0" prefWidth="263.0" text="Όνομα" />
+                    <TableColumn fx:id="colMoviesGenre" maxWidth="5000.0" minWidth="10.0" prefWidth="160.0" text="Είδος" />
+                  </columns>
+                </TableView>
+                <Button fx:id="bookButton" layoutX="753.0" layoutY="463.0" mnemonicParsing="false" onAction="#bookTicket" prefHeight="52.0" prefWidth="184.0" text="Κράτηση Εισιτηρίου" />
+                <Button fx:id="allMoviesButton" layoutX="21.0" layoutY="36.0" mnemonicParsing="false" onAction="#addAllMoviesToTable" prefHeight="20.0" prefWidth="159.0" text="Όλες οι ταινίες" />
+                <Label layoutX="255.0" layoutY="43.0" prefHeight="20.0" prefWidth="73.0" text="Φίλτρα:" textAlignment="CENTER">
+                  <font>
+                    <Font name="System Bold" size="14.0" />
+                  </font>
+                </Label>
+                <Label layoutX="333.0" layoutY="42.0" prefHeight="20.0" prefWidth="41.0" text="Είδος:" />
+                <Label layoutX="584.0" layoutY="42.0" prefHeight="20.0" prefWidth="53.0" text="Όνομα:" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab fx:id="ureservationsTab" text="Οι κρατήσεις μου">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TableView id="moviesTable" fx:id="bookingsTable" layoutX="260.0" layoutY="65.0" prefWidth="492.0">
+                  <columns>
+                    <TableColumn fx:id="colBMovie" maxWidth="5000.0" minWidth="10.0" prefWidth="142.0" text="Ταινία" />
+                    <TableColumn fx:id="colBDate" maxWidth="5000.0" minWidth="10.0" prefWidth="216.0" text="Ημερομηνία" />
+                    <TableColumn fx:id="colBRoom" maxWidth="5000.0" minWidth="10.0" prefWidth="132.0" text="Αίθουσα" />
+                  </columns>
+                </TableView>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </center>
+</BorderPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="637.0" prefWidth="749.0" styleClass="bgimg" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cinematickets.LoginSceneController">
+  <children>
+    <Pane layoutX="213.0" layoutY="38.0" prefHeight="561.0" prefWidth="336.0" style="-fx-background-color: #3e5360;&#10;-fx-text-align:center;&#10;">
+      <children>
+        <Label layoutX="130.0" layoutY="25.0" text="Σύνδεση" textFill="WHITE">
+          <font>
+            <Font size="20.0" fx:id="x1" />
+          </font>
+        </Label>
+        <TextField fx:id="logInUsername" layoutX="72.0" layoutY="61.0" prefWidth="200.0" promptText="Username" styleClass="regulartextfield" />
+        <PasswordField fx:id="loginPassword" layoutX="72.0" layoutY="98.0" prefWidth="200.0" promptText="Password" styleClass="regulartextfield" />
+        <CheckBox fx:id="loginAdmin" layoutX="123.0" layoutY="135.0" mnemonicParsing="false" text="Admin" textFill="WHITE">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </CheckBox>
+        <Button fx:id="loginButton" layoutX="132.0" layoutY="177.0" mnemonicParsing="false" onAction="#login" styleClass="regularbutton" stylesheets="@style.css" text="Σύνδεση" />
+        <Separator layoutX="10.0" layoutY="245.0" prefWidth="308.0" />
+        <Label font="$x1" layoutX="132.0" layoutY="260.0" text="Εγγραφή" textFill="WHITE" />
+        <TextField fx:id="signUpUsername" layoutX="72.0" layoutY="295.0" prefWidth="200.0" promptText="Username" styleClass="regulartextfield" />
+        <PasswordField id="signUpPassword" fx:id="signUpPasswordRepeat" layoutX="72.0" layoutY="333.0" prefWidth="200.0" promptText="Password" styleClass="regulartextfield" />
+        <PasswordField fx:id="signUpPassword" layoutX="72.0" layoutY="370.0" prefWidth="200.0" promptText="Repeat Password" styleClass="regulartextfield" />
+        <TextField id="signUpUsername" fx:id="signUpFname" layoutX="72.0" layoutY="407.0" prefWidth="200.0" promptText="Όνομα" styleClass="regulartextfield" />
+        <TextField id="signUpUsername" fx:id="signUpLname" layoutX="72.0" layoutY="444.0" prefWidth="200.0" promptText="Επώνυμο" styleClass="regulartextfield" />
+        <Label fx:id="loginErrorMessage" alignment="CENTER" layoutX="14.0" layoutY="221.0" prefWidth="304.0" text="" textAlignment="CENTER">
+          <font>
+            <Font size="11.0" fx:id="x3" />
+          </font>
+          <textFill>
+            <Color blue="0.600" green="0.600" red="1.000" fx:id="x2" />
+          </textFill>
+        </Label>
+        <Label fx:id="signUpErrorMessage" alignment="CENTER" font="$x3" layoutX="15.0" layoutY="533.0" prefWidth="304.0" text="" textAlignment="CENTER" textFill="$x2" />
+        <Button fx:id="signUpButton" layoutX="132.0" layoutY="485.0" mnemonicParsing="false" onAction="#signUp" styleClass="regularbutton" text="Εγγραφή" />
+      </children>
+    </Pane>
+  </children>
+</AnchorPane>
